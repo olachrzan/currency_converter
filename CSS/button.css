@@ -1,0 +1,36 @@
+.button {
+   margin: 0 20px 15px;
+   background-color: rgb(125, 178, 37);
+   padding: 10px 20px;
+   border-radius: 5px;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   text-shadow: 2px 2px 2px rgb(25, 37, 5);
+   cursor: pointer;
+   border: 2px solid #fff;
+}
+
+.button--reset {
+   background-color: rgb(230, 70, 70);
+   text-shadow: 2px 2px 2px rgb(42, 8, 8);
+}
+
+.button:hover {
+   border: 2px solid hsl(83, 66%, 46%);
+   background-color: hsl(83, 66%, 46%);
+}
+
+.button--reset:hover {
+   border: 2px solid rgb(230, 70, 70);
+   background-color: rgba(230, 70, 70, 0.972);
+}
+.button:active {
+   border: 2px solid rgb(125, 178, 37);
+   background-color: hsl(83, 66%, 48%);
+}
+
+.button--reset:active {
+   border: 2px solid rgb(230, 70, 70);
+   background-color: hsl(0, 76%, 65%);
+}

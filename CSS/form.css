@@ -1,0 +1,53 @@
+.form {
+   max-width: 500px;
+   margin: 40px auto 0;
+   text-align: center;
+}
+
+.form__label {
+   display: block;
+   margin: 30px;
+}
+
+.form__labelText {
+   display: inline-block;
+   width: 150px;
+   margin-bottom: 10px;
+   font-size: 20px;
+}
+
+.form__field {
+   max-width: 400px;
+   padding: 5px;
+   border-radius: 5px;
+   border: 2px solid #bbb;
+}
+
+.form__field--size {
+   max-width: 204px;
+   padding: 8px;
+}
+
+.form__field--exchangeRate {
+   background-color: rgb(236, 236, 236);
+}
+
+.interacted:invalid {
+   border: 2px solid rgb(255, 186, 186);
+   background-color: rgba(255, 186, 186, 0.541);
+}
+
+.form__paragraph {
+   margin: 10px 0;
+}
+
+.form__paragraph--top {
+   margin-top: 20px;
+}
+
+.form__paragraph--final {
+   font-size: 25px;
+   display: none;
+   margin: 20px 0 20px;
+   font-weight: 500;
+}

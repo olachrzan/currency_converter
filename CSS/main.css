@@ -1,0 +1,23 @@
+.main {
+   margin: 0 5%;
+}
+
+.main__container {
+   background-color: #fff;
+   max-width: 900px;
+   margin: 35px auto;
+   padding: 20px;
+   padding-bottom: 20px;
+   border-radius: 10px;
+   box-shadow: rgb(202, 202, 202) 0px 10px 20px, rgba(202, 202, 202) 0px 3px 10px;
+}
+
+.main__header {
+   max-width: 600px;
+   margin: 20px auto;
+   text-align: center;
+   border-bottom: 4px solid rgb(125, 178, 37);
+   padding-bottom: 15px;
+   font-size: 30px;
+   font-weight: 500;
+}

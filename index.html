@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kantor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500&display=swap" rel="stylesheet">
+  <link href="CSS/style.css" rel="stylesheet">
+  <link href="CSS/header.css" rel="stylesheet">
+  <link href="CSS/main.css" rel="stylesheet">
+  <link href="CSS/form.css" rel="stylesheet">
+  <link href="CSS/button.css" rel="stylesheet">
+  <script defer src="js/script.js"></script>
+</head>
+
+<body class="body">
+  <header class="header">
+    <h1 class="header__title">Kalkulator walut online</h1>
+  </header>
+  <main class="main">
+    <div class="main__container">
+      <h2 class="main__header">Przelicz walutę</h2>
+      <form class="form js-form" method="GET">
+        <label class="form__label"><span class="form__labelText">Kwota w PLN:*</span>
+          <input class="form__field form__field--size js-amount" type="number" min="0.01" step="0.01" required>
+        </label>
+        <label class="form__label"><span class="form__labelText">Przelicz na:</span>
+          <select class="form__field js-exchangedCurrency">
+            <option value="currencySelect" selected disabled>Wybierz walutę</option>
+            <option value="EUR">EUR - euro</option>
+            <option value="USD">USD - dolar amerykański</option>
+            <option value="GBP">GBP - funt szterling</option>
+            <option value="CHF">CHF - frank szwajcarski</option>
+          </select>
+        </label>
+        <label class="form__label"><span class="form__labelText">Kurs:**</span>
+          <input class="form__field form__field--size form__field--exchangeRate js-exchangeRate" type="number"
+            min="0.01" step="0.01">
+        </label>
+        <input class="button" type="submit" value="Przelicz">
+        <input class="button button--reset" type="reset" value="Resetuj">
+        <p class="form__paragraph form__paragraph--final js-finalParagraphCorrect"><span class="js-finalAmount"></span>
+          PLN = <strong class="js-finalResult"></strong> <span class="js-finalCurrency"></span>
+        </p>
+        <p class="form__paragraph form__paragraph--final js-finalParagraphFaulty">Wybierz walutę</p>
+        <p class="form__paragraph form__paragraph--top">
+          * - Należy wpisać liczbę, która ma max. dwa miejsca po przecinku
+        </p>
+        <p class="form__paragraph">** - Kurs można zmienić według potrzeb</p>
+      </form>
+    </div>
+  </main>
+
+</body>
+
+</html>
