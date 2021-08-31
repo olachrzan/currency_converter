@@ -1,12 +1,15 @@
 .header {
    background-color: rgb(125, 178, 37);
-   padding: 15px 15%;
+   padding: 20px 15%;
+   box-shadow: rgb(65, 65, 65) 0px 8px 20px;
+
 }
 
 .header__title {
+   margin: 0;
    color: #fff;
    font-size: 40px;
    font-weight: 500;
    text-transform: uppercase;
-   text-shadow: 2px 1px 0px rgb(105, 105, 105);
+   text-shadow: 2px 1px 2px rgb(65, 65, 65);
 }

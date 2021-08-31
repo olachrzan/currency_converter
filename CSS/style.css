@@ -7,6 +7,10 @@ html {
 }
 
 .body {
-   background-color: #eee;
+   background-color: black;
+   background-image: url(../images/alexander-schimmeck-AoI2E_7El1w-unsplash.jpg);
+   background-size: cover;
+   background-position: left;
+   background-attachment: fixed;
    font-family: 'Baloo Thambi 2', cursive;
 }
