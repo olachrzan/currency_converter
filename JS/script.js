@@ -1,53 +1,71 @@
-let form = document.querySelector(".js-form");
-let amount = document.querySelector(".js-amount");
-let exchangedCurrency = document.querySelector(".js-exchangedCurrency");
-let exchangeRate = document.querySelector(".js-exchangeRate");
-let finalResult = document.querySelector(".js-finalResult");
-let finalAmount = document.querySelector(".js-finalAmount");
-let finalCurrency = document.querySelector(".js-finalCurrency");
-let finalParagraphCorrect = document.querySelector(".js-finalParagraphCorrect");
-let finalParagraphFaulty = document.querySelector(".js-finalParagraphFaulty");
+{
+   const amountElement = document.querySelector(".js-amount");
+   const exchangedCurrencyElement = document.querySelector(".js-exchangedCurrency");
+   const exchangeRateElement = document.querySelector(".js-exchangeRate");
+   const finalParagraphCorrectElement = document.querySelector(".js-finalParagraphCorrect");
+   const finalParagraphFaultyElement = document.querySelector(".js-finalParagraphFaulty");
 
-amount.addEventListener("blur", () => {
-   amount.classList.add("interacted");
-});
+   const addClass = () => {
+      amountElement.classList.add("interacted");
+   };
 
-exchangedCurrency.addEventListener("input", () => {
-   switch (exchangedCurrency.value) {
-      case "EUR":
-         exchangeRate.value = 4.55;
-         break;
-      case "USD":
-         exchangeRate.value = 3.89;
-         break;
-      case "GBP":
-         exchangeRate.value = 5.35;
-         break;
-      case "CHF":
-         exchangeRate.value = 4.24;
-         break;
-      default:
-         exchangeRate.value = "";
-   }
-});
+   const getRate = () => {
+      const exchangedCurrency = exchangedCurrencyElement.value;
 
-form.addEventListener("reset", () => {
-   finalParagraphCorrect.style.display = "none";
-   finalParagraphFaulty.style.display = "none";
-   amount.classList.remove("interacted");
-});
+      switch (exchangedCurrency) {
+         case "EUR":
+            return 4.55;
+         case "USD":
+            return 3.89;
+         case "GBP":
+            return 5.35;
+         case "CHF":
+            return 4.24;
+         default:
+            return "";
+      }
+   };
 
-form.addEventListener("submit", (event) => {
-   event.preventDefault();
-   let result = amount.value / exchangeRate.value;
-   if (exchangedCurrency.value !== "currencySelect") {
-      finalParagraphFaulty.style.display = "none";
-      finalParagraphCorrect.style.display = "block";
-      finalAmount.innerText = amount.value;
-      finalResult.innerText = result.toFixed(2);
-      finalCurrency.innerText = exchangedCurrency.value;
-   } else {
-      finalParagraphFaulty.style.display = "block";
-      finalParagraphCorrect.style.display = "none";
-   }
-});
+   const showRate = () => {
+      exchangeRateElement.value = getRate();
+   };
+
+   const resetForm = () => {
+      finalParagraphCorrectElement.style.display = "none";
+      finalParagraphFaultyElement.style.display = "none";
+      amountElement.classList.remove("interacted");
+   };
+
+   const showResultText = (event) => {
+      event.preventDefault();
+
+      const finalCurrencyElement = document.querySelector(".js-finalCurrency");
+      const finalResultElement = document.querySelector(".js-finalResult");
+      const finalAmountElement = document.querySelector(".js-finalAmount");
+
+      const amount = amountElement.value;
+      let result = amount / exchangeRateElement.value;
+
+      if (exchangedCurrencyElement.value !== "currencySelect") {
+         finalParagraphFaultyElement.style.display = "none";
+         finalParagraphCorrectElement.style.display = "block";
+         finalAmountElement.innerText = amount;
+         finalResultElement.innerText = result.toFixed(2);
+         finalCurrencyElement.innerText = exchangedCurrencyElement.value;
+      } else {
+         finalParagraphFaultyElement.style.display = "block";
+         finalParagraphCorrectElement.style.display = "none";
+      }
+   };
+
+   const init = () => {
+      const formElement = document.querySelector(".js-form");
+      amountElement.addEventListener("blur", addClass);
+      exchangedCurrencyElement.addEventListener("input", getRate);
+      exchangedCurrencyElement.addEventListener("input", showRate);
+      formElement.addEventListener("reset", resetForm);
+      formElement.addEventListener("submit", showResultText);
+   };
+
+   init();
+}
