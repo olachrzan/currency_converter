@@ -9,7 +9,7 @@
    padding: 20px;
    padding-bottom: 20px;
    border-radius: 10px;
-   box-shadow: rgb(65, 65, 65) 0px 10px 20px, rgb(65, 65, 65) 0px 3px 10px;
+   box-shadow: rgb(212, 212, 212) 0px 10px 20px, rgb(177, 177, 177) 0px 3px 10px;
 }
 
 .main__header {
@@ -19,5 +19,5 @@
    border-bottom: 4px solid rgb(125, 178, 37);
    padding-bottom: 15px;
    font-size: 30px;
-   font-weight: 500;
+   font-weight: 400;
 }

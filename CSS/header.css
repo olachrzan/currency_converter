@@ -1,15 +1,22 @@
 .header {
-   background-color: rgb(125, 178, 37);
-   padding: 20px 15%;
-   box-shadow: rgb(65, 65, 65) 0px 8px 20px;
+   background-color: rgb(117, 172, 27);
+   padding: 20px 5%;
+   box-shadow: rgb(177, 177, 177) 0px 3px 10px;
+}
 
+.header__container {
+   max-width: 900px;
+   margin: 0 auto;
+   padding-left: 5px;
 }
 
 .header__title {
    margin: 0;
+   font-family: 'Open Sans', sans-serif;
    color: #fff;
-   font-size: 40px;
+   font-size: 35px;
    font-weight: 500;
    text-transform: uppercase;
-   text-shadow: 2px 1px 2px rgb(65, 65, 65);
+   letter-spacing: 1px;
+   text-shadow: 2px 1px 2px rgb(29, 100, 15);
 }

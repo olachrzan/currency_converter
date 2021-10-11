@@ -7,9 +7,6 @@ html {
 }
 
 .body {
-   background-image: url(../images/money-background.jpg);
-   background-size: cover;
-   background-position: left;
-   background-attachment: fixed;
-   font-family: 'Baloo Thambi 2', cursive;
+   background-color: #e7e7e7;
+   font-family: 'Source Serif Pro', serif;
 }
