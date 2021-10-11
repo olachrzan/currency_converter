@@ -1,36 +1,35 @@
 .button {
    margin: 0 20px 15px;
-   background-color: rgb(125, 178, 37);
    padding: 10px 20px;
+   background-color: hsl(83, 73%, 39%);
+   border: 2px solid hsl(83, 73%, 35%);
    border-radius: 5px;
    color: #fff;
    font-size: 18px;
    font-weight: 500;
-   text-shadow: 2px 2px 2px rgb(25, 37, 5);
+   text-shadow: 2px 2px 2px rgb(41, 56, 15);
    cursor: pointer;
-   border: 2px solid rgb(250, 250, 250);
+   transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
 }
 
 .button--reset {
-   background-color: rgb(230, 70, 70);
+   background-color: hsl(0, 76%, 59%);
+   border-color: hsl(0, 76%, 50%);
    text-shadow: 2px 2px 2px rgb(42, 8, 8);
 }
 
 .button:hover {
-   border: 2px solid hsl(83, 66%, 46%);
-   background-color: hsl(83, 66%, 46%);
+   transform: scale(1.05);
+   background-color: hsl(83, 73%, 37%);
 }
 
 .button--reset:hover {
-   border: 2px solid rgb(230, 70, 70);
-   background-color: rgba(230, 70, 70, 0.972);
+   background-color: hsl(0, 76%, 57%);
 }
 .button:active {
-   border: 2px solid rgb(125, 178, 37);
-   background-color: hsl(83, 66%, 48%);
+   background-color: hsl(83, 73%, 35%);
 }
 
 .button--reset:active {
-   border: 2px solid rgb(230, 70, 70);
-   background-color: hsl(0, 76%, 65%);
+   background-color: hsl(0, 76%, 55%);
 }
