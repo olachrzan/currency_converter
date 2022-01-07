@@ -1,5 +1,5 @@
 # Currency Converter
-It's a simply currency converter that will be further developed.
+It is a simple currency converter that was further developed as a new [repository](https://github.com/olachrzan/currency_converter_react).
 
 You can convert PLN to EUR, USD, GBP or CHF.
 
